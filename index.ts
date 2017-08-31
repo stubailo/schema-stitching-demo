@@ -38,22 +38,21 @@ async function run() {
     '/graphiql',
     graphiqlExpress({
       endpointURL: '/graphql',
-      query: `
-        query {
-          event(id: "5983706debf3140039d1e8b4") {
-            title
-            description
-            url
-            location {
-              city
-              country
-              weather {
-                summary
-                temperature
-              }
-            }
-          }
-        }
+      query: `query {
+  event(id: "5983706debf3140039d1e8b4") {
+    title
+    description
+    url
+    location {
+      city
+      country
+      weather {
+        summary
+        temperature
+      }
+    }
+  }
+}
       `,
     })
   );
