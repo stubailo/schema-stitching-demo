@@ -8,7 +8,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "graphql": "^0.10.5",
-    "graphql-tools": "^2.0.0-alpha.9"
+    "graphql-tools": "^2.0.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
