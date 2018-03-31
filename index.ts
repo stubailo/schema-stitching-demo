@@ -15,9 +15,13 @@ async function run() {
 	const universeSchema = await createRemoteSchema('https://www.universe.com/graphql/beta')
 	const weatherSchema = await createRemoteSchema('https://5rrx10z19.lp.gql.zone/graphql');
 	const linkSchemaDefs = `
+		extend type Location {
+			weather: Weather
+		}
+		
     extend type Event {
         location: Location
-    }
+		}
   `
 	const schema = mergeSchemas({
 		schemas: [universeSchema, weatherSchema, linkSchemaDefs],
